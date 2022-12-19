@@ -1,0 +1,320 @@
+:root {
+  --btnFlexBasis: 14%;
+  --accentColor: hotpink;
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  overflow: hidden;
+
+  font-family: oswald;
+  font-weight: 500;
+  background-color: white;
+}
+
+.btn-nuclear {
+  display: none;
+}
+
+body.nuclear {
+  background-color: black;
+  /* animation: nuclear 5s; */
+  transition: background-color 3s;
+  color: white;
+}
+
+
+nav {
+  display: flex;
+  gap:.25rem;
+}
+
+.japanese .japanese,
+.english .english,
+.italian .italian {
+  color: var(--accentColor);
+}
+
+.nuclear .japanese,
+.nuclear .english,
+.nuclear .italian {
+  color: var(--accentColor);
+}
+
+.nuclear .interface {
+  border-bottom: 2px solid rgba(255,255,255,.7);
+}
+button {
+  appearance: none;
+  color: black;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #777;
+  color: #888;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+button:hover {
+  border: 1px solid var(--accentColor);
+}
+
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  flex-grow: 1;
+  font-weight: 200;
+}
+h1 a,
+h1 a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+h1 a span {
+  color: var(--accentColor);
+}
+h1 a:hover {
+  color: var(--accentColor);
+}
+h1 a:hover span {
+  color: white;
+}
+header.interface {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: .5rem;
+  z-index: 10;
+  position: fixed;
+  z-index: 200;
+  background-color: #000;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  padding: .25rem 1%;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 600px) {
+  header.interface {
+    text-align: unset;
+    justify-content: space-between;
+  }
+}
+
+
+
+.no-language-chosen button {
+  animation: pulse 3s infinite;
+  animation-fill-mode: both;
+}
+nav button:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+/* BUTTON GRID =================== */
+.button-grid {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: .5;
+}
+.button-grid button {
+  border: none;
+  border: 1px solid #eef;
+  min-height: 15px;
+  min-width: 30px;
+  flex: 1 1 var(--btnFlexBasis);
+  color: white;
+  transition: font-size 1s, color 1s;
+}
+
+
+
+
+.nuclear .button-grid button {
+  opacity: .2;
+}
+.button-grid button:hover {
+  color: #dde;
+  position: relative;
+  z-index: 10;
+  /* font-size: 24rem; */
+}
+
+@media screen and (min-width: 700px){
+  .button-grid button:hover {
+  font-size: 24rem;
+    min-height: 20px;
+    min-width: 50px;
+}
+}
+
+
+/* MESSAGES BOX ================== */
+.messages {
+  font-size: 1.75rem;
+  text-align: center;
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+flex-flow: column nowrap;
+}
+
+/* Leanne Suggestion May 23 */
+.messages {
+  white-space:nowrap;
+}
+
+@media screen and (min-width: 600px) {
+  .messages {
+    font-size: 3rem;
+  }
+}
+
+.choose:nth-of-type(2) {
+  color: var(--accentColor);
+}
+
+.click-wrapper,
+.no-language-chosen .click-wrapper,
+.english .choose-wrapper,
+.japanese .choose-wrapper,
+.italian .choose-wrapper,
+.nuclear .choose-wrapper {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.no-phrase-chosen .click-wrapper {
+  opacity: unset;
+  height: unset;
+  width: unset;
+  overflow: unset;
+}
+
+.japanese .click-japanese,
+.english .click-english,
+.italian .click-italian
+{
+  color: var(--accentColor);
+  font-weight: 500;
+}
+
+
+/* PHRASES & SYNONYMS =============== */
+
+.english .messages-output-wrapper {
+  display: flex;
+  gap: .5rem;
+}
+.message-text,
+.message-synonym {
+  transition: font-size .5s;
+  line-height: 1;
+}
+.message-synonym {
+  color: var(--accentColor);
+}
+
+
+/* FINAL SCREEN ===================== */
+
+.fa-solid {
+  font-size: 2rem;
+  padding:.25rem;
+  color: var(--accentColor);
+}
+.nuclear .btn-nuclear {
+  display: flex;
+  gap:.25rem;
+  align-items: center;
+}
+
+.messages, 
+.button-grid {
+  transition: all 2s;
+}
+
+  /* .nuclear-option .messages,
+  .nuclear-option .button-grid {
+    opacity: 0;
+    transform: scale(2);
+  } */
+
+
+
+/* UTILITY CLASSES =============== */
+  .visually-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .fa {
+  font-family: "Font Awesome 6 Solid";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 10rem;
+    height: 50px;
+
+  }
+
+
+  /* ANIMATION =================== */
+
+    @keyframes pulse {
+
+    0% {
+      color: #777;
+    }
+    50% {
+      color: white;
+    }
+    
+  }
+
+
+  @keyframes nuclear {
+    25% {
+      background-color: #eef;
+    }
+    50% {
+      background-color: orange;
+    }
+    75% {
+      background-color: #a9c;
+    }
+  }
