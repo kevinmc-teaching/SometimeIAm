@@ -1,7 +1,7 @@
 import english from "./data-english.js";
 import japanese from "./data-japanese.js";
 import italian from "./data-italian.js";
-// import text from "./data-italian.js";
+import text from "./data-spanish.js";
 
 let mainText = 210;
 let langChoice = "";
@@ -37,6 +37,9 @@ navMain.addEventListener("click", (e) => {
   }
   else if (langChoice == "italian") {
     currentModule = italian;
+  }
+  else if (langChoice == "spanish") {
+    currentModule = spanish;
   }
   else {
     currentModule = "nuclear";
