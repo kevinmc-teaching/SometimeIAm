@@ -1,7 +1,7 @@
 import english from "./data-english.js";
 import japanese from "./data-japanese.js";
 import italian from "./data-italian.js";
-import text from "./data-spanish.js";
+import spanish from "./data-spanish.js";
 
 let mainText = 210;
 let langChoice = "";
@@ -45,6 +45,7 @@ navMain.addEventListener("click", (e) => {
     currentModule = "nuclear";
   }
 
+  console.log("The current module is ",currentModule);
   phrasesChosen = 0;
   preloadAudio();
 
@@ -124,9 +125,9 @@ function getPath(btnClicked) {
 
   if (currentModule == "nuclear") {
 
-    const langModules = [japanese,english,italian];
-    const langNames = ["japanese","english","italian"];
-    const langLength = [japanese.length,english.length,italian.length];
+    const langModules = [japanese,english,italian,spanish];
+    const langNames = ["japanese","english","italian","spanish"];
+    const langLength = [japanese.length,english.length,italian.length, spanish.length];
 
     const rand = Math.floor(Math.random() * langLength.length);
     folder = langNames[rand]

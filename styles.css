@@ -36,13 +36,15 @@ nav {
 
 .japanese .japanese,
 .english .english,
-.italian .italian {
+.italian .italian,
+.spanish .spanish {
   color: var(--accentColor);
 }
 
 .nuclear .japanese,
 .nuclear .english,
-.nuclear .italian {
+.nuclear .italian,
+.nuclear .spanish {
   color: var(--accentColor);
 }
 
@@ -208,7 +210,8 @@ flex-flow: column nowrap;
 .english .choose-wrapper,
 .japanese .choose-wrapper,
 .italian .choose-wrapper,
-.nuclear .choose-wrapper {
+.nuclear .choose-wrapper,
+.spanish .choose-wrapper {
   opacity: 0;
   height: 0;
   width: 0;
@@ -224,7 +227,8 @@ flex-flow: column nowrap;
 
 .japanese .click-japanese,
 .english .click-english,
-.italian .click-italian
+.italian .click-italian,
+.spanish .click-spanish
 {
   color: var(--accentColor);
   font-weight: 500;
