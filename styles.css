@@ -38,14 +38,16 @@ nav {
 .japanese .japanese,
 .english .english,
 .italian .italian,
-.spanish .spanish {
+.spanish .spanish,
+.persian .persian {
   color: var(--accentColor);
 }
 
 .nuclear .japanese,
 .nuclear .english,
 .nuclear .italian,
-.nuclear .spanish {
+.nuclear .spanish,
+.nuclear .persian {
   color: var(--accentColor);
 }
 
@@ -211,6 +213,7 @@ flex-flow: column nowrap;
 .english .choose-wrapper,
 .japanese .choose-wrapper,
 .italian .choose-wrapper,
+.persian .choose-wrapper,
 .nuclear .choose-wrapper,
 .spanish .choose-wrapper {
   opacity: 0;
@@ -229,6 +232,7 @@ flex-flow: column nowrap;
 .japanese .click-japanese,
 .english .click-english,
 .italian .click-italian,
+.persian .click-persian,
 .spanish .click-spanish
 {
   color: var(--accentColor);

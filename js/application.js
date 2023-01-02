@@ -2,8 +2,9 @@ import english from "./data-english.js";
 import japanese from "./data-japanese.js";
 import italian from "./data-italian.js";
 import spanish from "./data-spanish.js";
+import persian from "./data-persian.js";
 
-let mainText = 210;
+let mainText = 150;
 let langChoice = "";
 let currentModule = "";
 let phrasesChosen = 0;
@@ -40,6 +41,9 @@ navMain.addEventListener("click", (e) => {
   }
   else if (langChoice == "spanish") {
     currentModule = spanish;
+  }
+  else if (langChoice == "persian") {
+    currentModule = persian;
   }
   else {
     currentModule = "nuclear";
