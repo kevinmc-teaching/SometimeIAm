@@ -129,9 +129,9 @@ function getPath(btnClicked) {
 
   if (currentModule == "nuclear") {
 
-    const langModules = [japanese,english,italian,spanish];
-    const langNames = ["japanese","english","italian","spanish"];
-    const langLength = [japanese.length,english.length,italian.length, spanish.length];
+    const langModules = [japanese,english,italian,spanish,persian];
+    const langNames = ["japanese","english","italian","spanish","persian"];
+    const langLength = [japanese.length,english.length,italian.length, spanish.length,persian.length];
 
     const rand = Math.floor(Math.random() * langLength.length);
     folder = langNames[rand]
