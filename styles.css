@@ -39,7 +39,8 @@ nav {
 .english .english,
 .italian .italian,
 .spanish .spanish,
-.persian .persian {
+.persian .persian,
+.urdu .urdu {
   color: var(--accentColor);
 }
 
@@ -47,7 +48,8 @@ nav {
 .nuclear .english,
 .nuclear .italian,
 .nuclear .spanish,
-.nuclear .persian {
+.nuclear .persian,
+.nuclear .urdu {
   color: var(--accentColor);
 }
 
@@ -215,7 +217,8 @@ flex-flow: column nowrap;
 .italian .choose-wrapper,
 .persian .choose-wrapper,
 .nuclear .choose-wrapper,
-.spanish .choose-wrapper {
+.spanish .choose-wrapper,
+.urdu .choose-wrapper {
   opacity: 0;
   height: 0;
   width: 0;
@@ -233,7 +236,8 @@ flex-flow: column nowrap;
 .english .click-english,
 .italian .click-italian,
 .persian .click-persian,
-.spanish .click-spanish
+.spanish .click-spanish,
+.urdu .click-urdu
 {
   color: var(--accentColor);
   font-weight: 500;
