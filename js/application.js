@@ -3,6 +3,7 @@ import japanese from "./data-japanese.js";
 import italian from "./data-italian.js";
 import spanish from "./data-spanish.js";
 import persian from "./data-persian.js";
+import urdu from "./data-urdu.js";
 
 let mainText = 150;
 let langChoice = "";
@@ -44,6 +45,9 @@ navMain.addEventListener("click", (e) => {
   }
   else if (langChoice == "persian") {
     currentModule = persian;
+  }
+  else if (langChoice == "urdu") {
+    currentModule = urdu;
   }
   else {
     currentModule = "nuclear";
@@ -129,9 +133,9 @@ function getPath(btnClicked) {
 
   if (currentModule == "nuclear") {
 
-    const langModules = [japanese,english,italian,spanish,persian];
-    const langNames = ["japanese","english","italian","spanish","persian"];
-    const langLength = [japanese.length,english.length,italian.length, spanish.length,persian.length];
+    const langModules = [japanese,english,italian,spanish,persian,urdu];
+    const langNames = ["japanese","english","italian","spanish","persian","urdu"];
+    const langLength = [japanese.length,english.length,italian.length, spanish.length,persian.length,urdu.length];
 
     const rand = Math.floor(Math.random() * langLength.length);
     folder = langNames[rand]
